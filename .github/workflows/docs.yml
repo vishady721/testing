@@ -33,10 +33,6 @@ jobs:
       - name: Add redirect
         run: echo '<meta http-equiv="refresh" content="0;url=hello/index.html">' > target/doc/index.html
 
-      # Prevent GitHub Pages/Jekyll from messing with files like `*.html` and paths
-      - name: Disable Jekyll
-        run: touch target/doc/.nojekyll
-
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
